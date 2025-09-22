@@ -101,8 +101,8 @@ Set postgres secretKey
 */}}
 {{- define "wiki.postgresql.secretKey" -}}
 {{- if .Values.postgresql.enabled -}}
-"postgresql-password"
+"postgres-password"
 {{- else -}}
-{{- default "postgresql-password" .Values.postgresql.existingSecretKey | quote -}}
+{{- default "postgres-password" .Values.postgresql.existingSecretKey | quote -}}
 {{- end -}}
 {{- end -}}
